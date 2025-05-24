@@ -1,0 +1,85 @@
+---
+import { Image } from 'astro:assets'
+
+import Star from '../assets/icons/star.svg'
+import QuotationMark from '../assets/icons/quotation-mark.svg'
+import BrandSecondary from '../assets/illustrations/brand-secondary.svg'
+import face from '../assets/images/testimonials/face.png'
+import Arrow from '../assets/icons/arrow.svg'
+---
+
+<section
+    class="flex flex-col items-center justify-center gap-8 p-8 bg-[linear-gradient(136deg,_rgba(255,243,228,0.4)_22.34%,_rgba(199,95,0,0.4)_257.06%)]"
+>
+    <h2 class="text-3xl">
+        Testimonios <span class="font-serif">de su historia</span>
+    </h2>
+
+    <div class="shadow-2xl rounded-2xl bg-white max-w-3xl">
+        <div class="relative shadow-lg rounded-2xl px-18 py-8">
+            <QuotationMark width={32} height={32} class="absolute start-4" />
+
+            <div
+                class="flex flex-col items-center justify-center gap-2 text-sm"
+            >
+                <p>
+                    Fue como mágico el hecho de poder visitar a mi madre y poder
+                    revivir esos momentos que tanto atesoro.
+                </p>
+                <p>
+                    Muy recomendable para aquellas personas que buscan que sus
+                    seres queridos trasciendan mas allá de nuestras memorias.
+                </p>
+            </div>
+
+            <QuotationMark
+                width={32}
+                height={32}
+                class="rotate-180 absolute end-4 -translate-y-1/1"
+            />
+
+            <Image
+                src={face}
+                alt="Imagen de persona que deja una reseña"
+                width={4960}
+                height={3507}
+                class="absolute b-0 left-1/2 -translate-x-1/2 h-16 w-16 border-red border object-cover rounded-full"
+            />
+        </div>
+
+        <div class="flex flex-col p-6 mt-6 gap-8">
+            <div class="flex flex-col items-center gap-2">
+                <div class="flex flex-row gap-0.5">
+                    <Star width={16} height={16} />
+                    <Star width={16} height={16} />
+                    <Star width={16} height={16} />
+                    <Star width={16} height={16} />
+                    <Star width={16} height={16} />
+                </div>
+
+                <div class="flex flex-row items-center justify-center gap-2">
+                    <Arrow
+                        width={32}
+                        height={32}
+                        class="hover:scale-120 transition-transform duration-200"
+                    />
+                    <p class="text-base font-semibold">Natalia Bustamante</p>
+                    <Arrow
+                        width={32}
+                        height={32}
+                        class="rotate-180 hover:scale-120 transition-transform duration-200"
+                    />
+                </div>
+                <p class="text-base font-medium text-gray-500">Usuaria</p>
+            </div>
+
+            <div class="flex flex-row items-center justify-center gap-2 mt-4">
+                <div class="bg-black w-16 h-1 rounded-xl"></div>
+                <div class="bg-gray-300 w-16 h-1 rounded-xl"></div>
+                <div class="bg-gray-300 w-16 h-1 rounded-xl"></div>
+            </div>
+        </div>
+    </div>
+
+    <BrandSecondary width={44} height={63} class="mx-auto mt-8" />
+</section>

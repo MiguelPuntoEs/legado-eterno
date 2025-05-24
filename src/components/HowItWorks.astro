@@ -1,0 +1,38 @@
+---
+import { Image } from 'astro:assets'
+
+import howItWorks from '../assets/images/como-funciona.png'
+---
+
+<section
+    class="flex flex-col items-center justify-center gap-4 p-8 max-w-7xl mx-auto"
+>
+    <h2 class="text-center text-3xl">
+        Inmortaliza a esa persona <span class="font-serif italic"
+            >honrando su vida</span
+        >
+    </h2>
+    <p class="text-center">
+        Creamos un espacio para homenajear a esas personas que tanto
+        significaron para ti.
+    </p>
+    <Image
+        src={howItWorks}
+        alt="Captura de la aplicación para ilustrar cómo funciona"
+        width={4960}
+        height={3507}
+        class="h-full w-full object-cover"
+    />
+    <h3 class="text-center text-2xl font-serif italic">¿Cómo funciona?</h3>
+    <p class="text-center">
+        Creamos placas con un código QR para recordar a tus seres queridos
+        fallecidos. En el mismo podrás cargar tus memorias y rendirles tributo,
+        cada vez que lo visites puedes acceder a esos momentos compartidos
+        escaneando el mismo por medio de nuestra APP.
+    </p>
+
+    <button
+        class="border-2 py-3 px-16 rounded-full border-black mt-2 font-semibold hover:bg-black hover:text-white transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600"
+        >Conocer más</button
+    >
+</section>

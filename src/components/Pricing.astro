@@ -1,0 +1,101 @@
+---
+import { Image } from 'astro:assets'
+import pets from '../assets/images/pets.jpg'
+---
+
+<section
+    class="flex flex-col items-center justify-center gap-8 p-8 max-w-7xl mx-auto"
+>
+    <h2 class="text-3xl">
+        Personaliza tu <span class="font-serif">tributo</span>
+    </h2>
+    <p class="text-center">
+        Tenemos distintas opciones según desees recordar a ese ser especial.
+    </p>
+
+    <div class="flex flex-col md:flex-row gap-2">
+        <div class="flex flex-col gap-6 p-6 rounded-2xl border border-gray-400">
+            <div class="flex flex-col gap-1">
+                <h3>Plan de prueba</h3>
+                <span class="text-4xl">Gratuito</span>
+            </div>
+            <div>
+                <p>Preservar para siempre con:</p>
+                <ul class="list-disc list-inside font-light mt-2">
+                    <li>Característica</li>
+                    <li>Característica</li>
+                    <li>Característica</li>
+                </ul>
+            </div>
+            <button
+                class="border-1 py-3 px-16 rounded-full border-black mt-2 font-medium hover:bg-black hover:text-white transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600"
+                >Empieza ahora</button
+            >
+        </div>
+        <div class="flex flex-col gap-6 p-6 rounded-2xl border border-gray-400">
+            <div class="flex flex-col gap-1">
+                <h3>Basic</h3>
+                <span class="text-4xl">39€</span>
+                <span class="text-sm">Contratado anualmente</span>
+            </div>
+            <div>
+                <p>Preservar para siempre con:</p>
+                <ul class="list-disc list-inside font-light mt-2">
+                    <li>Característica</li>
+                    <li>Característica</li>
+                    <li>Característica</li>
+                </ul>
+            </div>
+            <button
+                class="border-1 py-3 px-16 rounded-full border-black mt-2 font-medium hover:bg-black hover:text-white transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600"
+                >Empieza ahora</button
+            >
+        </div>
+        <div
+            class="flex flex-col gap-6 p-6 rounded-2xl border border-gray-400 bg-[#FFF3E4]"
+        >
+            <div class="flex flex-col gap-1">
+                <h3>Pro</h3>
+                <span class="text-4xl">59€</span>
+                <span class="text-sm">Contratado anualmente</span>
+            </div>
+            <div>
+                <p>Preservar para siempre con:</p>
+                <ul class="list-disc list-inside font-light mt-2">
+                    <li>Característica</li>
+                    <li>Característica</li>
+                    <li>Característica</li>
+                </ul>
+            </div>
+            <button class="bg-black text-white px-6 py-3 rounded-full"
+                >Empieza ahora</button
+            >
+        </div>
+    </div>
+
+    <div
+        class="bg-pets flex flex-row gap-6 p-6 rounded-2xl justify-center items-center"
+    >
+        <Image
+            src={pets}
+            alt="Imagen de mascotas"
+            width={4960}
+            height={3507}
+            class="h-[245px] w-[245px] object-cover rounded-2xl hidden md:block"
+        />
+        <div class="flex flex-col gap-4">
+            <h3 class="font-bold text-lg">Mascotas</h3>
+            <p class="text-2xl">
+                Ellos también son <span class="font-serif">especiales</span>
+                ❤️
+            </p>
+            <p class="text-base">
+                Recuerda para siempre a tu amigo más incondicional
+            </p>
+            <button
+                class="border-1 py-3 px-16 rounded-full border-black mt-2 font-medium hover:bg-black hover:text-white transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600"
+                >Conocer más</button
+            >
+        </div>
+    </div>
+</section>

@@ -1,0 +1,23 @@
+---
+import { Image } from 'astro:assets'
+import placa from '../assets/images/placa.png'
+import Amazon from '../assets/logos/amazon.svg'
+---
+
+<section>
+    <div
+        class="rounded-2xl shadow-2xl p-8 max-w-lg mx-auto flex flex-col items-center justify-center gap-4"
+    >
+        <Image
+            src={placa}
+            alt="Captura de la aplicación para ilustrar cómo funciona"
+            width={4960}
+            height={3507}
+            class="h-full w-full object-cover rounded-2xl"
+        />
+        <Amazon width={120} height={40} aria-hidden />
+        <button class="bg-black text-white px-6 py-3 rounded-full"
+            >Adquirir tu grabado ahora</button
+        >
+    </div>
+</section>

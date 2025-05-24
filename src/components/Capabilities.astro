@@ -1,0 +1,81 @@
+---
+import { Image } from 'astro:assets'
+import memoryImg from '../assets/images/foto-recuerdo.jpg'
+import Dove from '../assets/illustrations/dove.svg'
+import Key from '../assets/illustrations/key.svg'
+import Feather from '../assets/illustrations/feather.svg'
+---
+
+<section
+    class="flex flex-col items-center justify-center gap-4 p-8 max-w-7xl mx-auto"
+>
+    <div class="flex flex-col lg:flex-row items-center justify-center gap-4">
+        <div class="flex flex-col gap-4 p-8">
+            <h2 class="text-3xl">
+                Dale vida a los recuerdos de tus<br /><span
+                    class="font-serif italic">Seres queridos</span
+                >
+            </h2>
+            <p class="">
+                Conmemora a esas personas que fueron especiales para tí.
+                Inmortaliza tus memorias contando quien fue.
+            </p>
+            <div>
+                <p class="text-orange-500 font-semibold">
+                    Con legado eterno podrás:
+                </p>
+                <ul class="list-disc list-inside mt-4">
+                    <li>Personalizar tu perfil</li>
+                    <li>Crear tributos en diferentes legados</li>
+                    <li>
+                        Dejar una descripción para que la comunidad sepa cómo
+                        era esa persona a la que quieres rendir homenaje
+                    </li>
+                    <li>
+                        Genera un homenaje impreso o cartel conmemorativo con un
+                        enlace al legado de esa persona
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="flex flex-col items-center justify-center gap-4 p-8 shadow-2xl rounded-2xl max-w-lg"
+        >
+            <Image
+                src={memoryImg}
+                alt="Captura de la aplicación para ilustrar cómo funciona"
+                width={4960}
+                height={3507}
+                class="h-full w-full object-cover rounded-2xl"
+            />
+
+            <span class="font-semibold">31 de mayo – Nuestro paseo juntos</span>
+            <p class="text-[#4B5563]">
+                Lo mejor de compartir con ustedes era el hecho de que siempre
+                nos divertíamos juntos, cuando me contaban chistes de los que a
+                mi me gustaban..
+            </p>
+        </div>
+    </div>
+    <div class="bg-gray-100 rounded-2xl mt-20 flex flex-col lg:flex-row">
+        <div class="flex flex-col items-center justify-center gap-4 p-8">
+            <Feather width={68} height={70} aria-hidden />
+            <span class="text-xl font-semibold">Crea tu perfil</span>
+            <p>Descarga nuestra app y regístrate</p>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-4 p-8">
+            <Key width={46} height={70} aria-hidden />
+            <span class="text-xl font-semibold">Adquiere tu grabado</span>
+            <p>Que tendrá impreso el código QR para escanear</p>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-4 p-8">
+            <Dove width={72} height={70} aria-hidden />
+            <span class="text-xl font-semibold">Crea tu perfil</span>
+            <p>Descarga nuestra app y regístrate</p>
+        </div>
+    </div>
+    <button
+        class="border-2 py-3 px-16 rounded-full border-black mt-2 font-semibold hover:bg-black hover:text-white transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600"
+        >Conocer más</button
+    >
+</section>

@@ -1,0 +1,46 @@
+---
+import { Image } from 'astro:assets'
+import heroImg from '../assets/images/hero.jpg'
+import Brand from '../assets/illustrations/brand.svg'
+import Dehaze from '../assets/illustrations/dehaze.svg'
+---
+
+<section class="relative h-[680px] w-full">
+    <Image
+        src={heroImg}
+        alt="Imagen de fondo del hero. Personas en una reunión familiar"
+        width={1560}
+        height={1014}
+        class="h-full w-full object-cover"
+    />
+    <nav
+        class="absolute top-4 inset-x-4 bg-white flex justify-between items-center px-6 py-5 lg:py-3 rounded-full shadow max-w-7xl mx-auto"
+    >
+        <a href="/"><Brand width={135} height={25} /></a>
+        <ul class="hidden lg:flex gap-12 text-sm">
+            <a href="/" class="hover:font-semibold">Home</a>
+            <a href="/" class="hover:font-semibold">Cómo funciona</a>
+            <a href="/" class="hover:font-semibold">Parners</a>
+            <a href="/" class="hover:font-semibold">Mascotas</a>
+            <a href="/" class="hover:font-semibold">Contáctanos</a>
+        </ul>
+        <Dehaze width={24} height={24} class="lg:hidden" />
+        <button
+            class="bg-black text-white px-6 py-3 rounded-full hidden lg:block"
+            >Comenzar</button
+        >
+    </nav>
+    <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-white flex flex-col gap-8"
+    >
+        <h1 class="text-[40px] leading-[1.25]">
+            <span class="font-[500]"> Recuerdos únicos para la </span>
+            <span class="font-serif font-[400] italic">Eternidad</span>
+        </h1>
+
+        <button
+            class="border-2 py-3 px-16 mx-auto rounded-full border-white mt-2 font-semibold hover:bg-white hover:text-black transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600"
+            >Comenzar</button
+        >
+    </div>
+</section>
