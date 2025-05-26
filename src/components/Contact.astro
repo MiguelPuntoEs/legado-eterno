@@ -1,35 +1,51 @@
+---
+import Dove from '../assets/illustrations/dove.svg'
+---
+
 <section>
     <div
-        class="flex flex-col justify-center items-center p-8 shadow-2xl rounded-2xl"
+        class="flex flex-col justify-center items-center p-8 shadow-2xl rounded-2xl gap-6 max-w-7xl mx-auto my-16"
     >
-        <h3 class="font-serif">Contáctanos</h3>
+        <Dove width={72} height={70} aria-hidden class="text-black" />
+        <h3 class="font-serif italic text-4xl">Contáctanos</h3>
         <p>Déjanos tu consulta y nos comunicaremos a la mayor brevedad</p>
 
-        <form action="" class="flex flex-col gap-4 max-w-lg">
+        <form
+            action={`https://formspree.io/f/${import.meta.env.FORM_ID}`}
+            method="post"
+            class="flex flex-col gap-4 w-full max-w-lg"
+        >
             <div class="flex flex-col gap-1 w-full">
                 <label for="name">Nombre</label>
                 <input
                     type="text"
                     name="Nombre"
                     id="name"
+                    placeholder="Juan Pérez"
+                    required
                     class="bg-gray-200 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-600"
                 />
             </div>
             <div class="flex flex-col gap-1">
-                <label for="name">Nombre</label>
+                <label for="email">Email</label>
                 <input
                     type="email"
-                    name="Nombre"
-                    id="name"
+                    name="email"
+                    id="email"
+                    placeholder="correo@gmail.com"
+                    required
                     class="bg-gray-200 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-600"
                 />
             </div>
             <textarea
                 name="message"
                 id="message"
+                placeholder="Escribe tu mensaje aquí"
+                minlength="10"
+                required
                 class="bg-gray-200 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-600"
-            >
-            </textarea>
+            ></textarea>
+
             <button
                 type="submit"
                 class="bg-black text-white px-6 py-3 rounded-full"
@@ -38,3 +54,5 @@
         </form>
     </div>
 </section>
+
+<div class="h-50"></div>
