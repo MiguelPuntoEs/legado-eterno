@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.legadoeterno.com/sitemap-index.xml
+Sitemap: https://www.tulegadoeterno.com/sitemap-index.xml

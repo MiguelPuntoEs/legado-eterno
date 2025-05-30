@@ -7,7 +7,7 @@ import sitemap from '@astrojs/sitemap'
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://www.legadoeterno.com',
+    site: 'https://www.tulegadoeterno.com',
     vite: {
         plugins: [tailwindcss()],
     },
